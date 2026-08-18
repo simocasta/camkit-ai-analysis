@@ -1,0 +1,14 @@
+Characteristic,Retrospective overall,Training,Internal hold-out,Prospective
+"Participants, n",322,225,97,85
+"Age, median (IQR), years",34.5 (25.0–48.0),36.0 (26.0–50.0),34.0 (23.0–47.0),32.0 (25.0–45.0)
+"Male, n/N (%)",178/322 (55.3%),123/225 (54.7%),55/97 (56.7%),52/85 (61.2%)
+"BMI, median (IQR), observed values",25.9 (22.7–30.8),25.9 (22.8–30.6),25.7 (22.3–31.3),24.9 (22.6–28.1)
+"BMI missing, n/N (%)",115/322 (35.7%),75/225 (33.3%),40/97 (41.2%),10/85 (11.8%)
+"Pain score missing, n/N (%)",39/322 (12.1%),27/225 (12.0%),12/97 (12.4%),0/85 (0.0%)
+"At least one primary-model input missing, n/N (%)",135/322 (41.9%),90/225 (40.0%),45/97 (46.4%),10/85 (11.8%)
+"Clinically significant STKI, n/N (%)",97/322 (30.1%),72/225 (32.0%),25/97 (25.8%),18/85 (21.2%)
+"Twisting mechanism, n/N (%)",145/322 (45.0%),98/225 (43.6%),47/97 (48.5%),54/85 (63.5%)
+"Hyperextension mechanism, n/N (%)",40/322 (12.4%),27/225 (12.0%),13/97 (13.4%),16/85 (18.8%)
+"Non-contact mechanism, n/N (%)",200/322 (62.1%),141/225 (62.7%),59/97 (60.8%),53/85 (62.4%)
+Respondent/data source,clinician-documented retrospective records,clinician-documented retrospective records,clinician-documented retrospective records,patient-completed digital questionnaire
+Recruitment period,February–July 2023,February–July 2023,February–July 2023,October 2023–March 2025

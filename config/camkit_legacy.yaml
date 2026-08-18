@@ -1,0 +1,64 @@
+paths:
+  retrospective_encoded: ../data/CamKIT_AI_retro_comb_enc.csv
+  prospective_encoded: ../data/Validation/External/External_set_enc.csv
+  workspace: ../workspace
+  processed_root: ../data/processed
+  results_root: ../results
+
+data:
+  retrospective_name: CamKIT_AI_retro_comb_enc
+  prospective_name: External_set_enc
+  test_size: 0.3
+  random_state: 42
+
+thresholds:
+  min_npv: 0.95
+  min_discharge_rate: 0.15
+  min_ppv: 0.90
+  min_gap: 0.20
+  max_investigation_rate: 0.80
+  target_lr_minus: 0.15
+  target_lr_plus: 10.0
+  step: 0.01
+  selection_source: holdout
+  selection_basis: point
+  oof_n_splits: 10
+  oof_n_repeats: 5
+  bootstrap_thresholds: true
+  bootstrap_threshold_iterations: 2000
+  use_locked_thresholds: true
+  locked_lower_threshold: 0.29
+  locked_upper_threshold: 0.69
+
+confidence_intervals:
+  bootstrap_iterations: 2000
+  confidence_level: 0.95
+  random_state: 42
+  bootstrap_stratified: true
+  proportion_method: exact
+
+training:
+  metric: aucprc
+  num_iter: 300
+  num_study_iter: 10
+  num_ensemble_iter: 25
+  timeout: 360
+  score_threshold: 0.45
+  ensemble_size: 3
+  n_folds_cv: 10
+  sample_for_search: true
+  max_search_sample_size: 10000
+  classifiers:
+    - xgboost
+    - lgbm
+    - random_forest
+    - catboost
+  imputers:
+    - gain
+    - ice
+    - mean
+    - median
+    - mice
+    - missforest
+    - most_frequent
+    - softimpute

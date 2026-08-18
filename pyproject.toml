@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]  # >=77 for PEP 639 license metadata
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "camkit-ai"
+version = "0.1.0"
+description = "CamKIT-AI analysis utilities, pipeline provenance, tests and aggregate study outputs."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "Apache-2.0"
+license-files = ["LICENSE", "NOTICE"]
+authors = [
+  { name = "CamKIT-AI" }
+]
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+  "PyYAML>=6.0",
+  "scikit-learn>=1.6,<1.8",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+autop = [
+  "autoprognosis",
+]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+camkit-ai = "camkit_ai.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

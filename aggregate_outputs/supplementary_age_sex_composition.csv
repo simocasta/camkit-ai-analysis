@@ -1,0 +1,9 @@
+Cohort,Subgroup,n,Events
+Internal hold-out,Female,42,7
+Internal hold-out,Male,55,18
+Internal hold-out,Age over 25 years,66,18
+Internal hold-out,Age 25 years or younger,31,7
+Prospective,Female,33,3
+Prospective,Male,52,15
+Prospective,Age over 25 years,60,10
+Prospective,Age 25 years or younger,25,8

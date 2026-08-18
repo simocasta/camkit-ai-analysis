@@ -1,0 +1,80 @@
+{
+  "recorded": "2026-08-08",
+  "model": "Injury.top12",
+  "artifact_sha256": "7324cf556af10a97efc25bef3235b3e311cf968f04e2e578432540b6633b572f",
+  "feature_order": [
+    "swelling",
+    "weightbear",
+    "bmi",
+    "reduced_rom",
+    "twisting",
+    "activity_risk",
+    "pain_scale",
+    "popping",
+    "instability",
+    "locking",
+    "rapid_delayed",
+    "hyperextension"
+  ],
+  "ensemble": {
+    "method": "unweighted arithmetic mean",
+    "weights": [1, 1, 1],
+    "branches": [
+      {
+        "stages": ["most_frequent", "fast_ica", "maxabs_scaler", "data_cleanup", "catboost"],
+        "arguments": {
+          "most_frequent": {},
+          "fast_ica": {"n_components": 3},
+          "maxabs_scaler": {},
+          "catboost": {
+            "depth": 1,
+            "n_estimators": 3933,
+            "learning_rate": 0.038692171683878465,
+            "grow_policy": 0,
+            "l2_leaf_reg": 903.9839645298415,
+            "random_strength": 1.631417850231979,
+            "min_data_in_leaf": 138
+          }
+        }
+      },
+      {
+        "stages": ["gain", "data_cleanup", "lgbm"],
+        "arguments": {"gain": {}, "lgbm": {}}
+      },
+      {
+        "stages": ["missforest", "nop", "feature_normalizer", "data_cleanup", "xgboost"],
+        "arguments": {
+          "missforest": {"n_estimators": 20, "max_iter": 300, "max_depth": 3},
+          "nop": {},
+          "feature_normalizer": {},
+          "xgboost": {
+            "max_depth": 7,
+            "learning_rate": 0.2976999566062805,
+            "n_estimators": 7518,
+            "colsample_bytree": 0.2681314028562196,
+            "gamma": 0.9708000063714594,
+            "subsample": 0.8893902787416984,
+            "reg_lambda": 8.228829039983445,
+            "reg_alpha": 2.7889066822818203,
+            "colsample_bynode": 0.7192283820322498,
+            "colsample_bylevel": 0.7752381313176978,
+            "min_child_weight": 4,
+            "max_bin": 424,
+            "grow_policy": 0
+          }
+        }
+      }
+    ]
+  },
+  "inference_wrapper": {
+    "status": "post hoc analysis wrapper, not part of the fitted artifact",
+    "draws": 400,
+    "seed_sequence": "42 through 441 inclusive",
+    "operation": "average each patient probability across complete-cohort draws, then calculate metrics once"
+  },
+  "limitations": [
+    "Empty serializer argument objects defer to the pinned library implementation.",
+    "The retained record does not identify the stochastic component responsible for batch dependence.",
+    "The fitted artifact is not approved for public release."
+  ]
+}
