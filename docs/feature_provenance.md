@@ -1,6 +1,6 @@
 # Feature Provenance
 
-The manuscript primary model is `Injury.top12`. Its 12 inputs are exactly the 12 highest-ranked variables by mean absolute SHAP value in the retained development-stage analysis. They were mapped from the prospective patient questionnaire for this evaluation. The 27-feature development model is not reported as a definitive performance benchmark; its retained SHAP figure documents the feature-ranking route only. Retrospective clinician-documented fields and prospective patient-entered fields were normalised into the schema below before analysis.
+The manuscript primary model is `Injury.top12`. Its 12 inputs are exactly the 12 highest-ranked variables by mean absolute SHAP value in the retained development-stage analysis. The 12th- and 13th-ranked variables (hyperextension and age) had near-identical mean absolute SHAP values (about 0.0041 each in the retained plot). They were mapped from the prospective patient questionnaire for this evaluation. The 27-feature development model is not reported as a definitive performance benchmark; its retained SHAP figure documents the feature-ranking route only. Retrospective clinician-documented fields and prospective patient-entered fields were normalised into the schema below before analysis.
 
 | Retrospective feature | Prospective encoded input | In primary 12-feature model |
 | --- | --- | --- |
