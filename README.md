@@ -3,9 +3,9 @@
 Analysis code, fitted-pipeline specification, archived environment provenance
 and aggregate outputs for the study:
 
-> Machine-learning triage for acute soft-tissue knee injury after transfer to
-> patient-completed questionnaires: a secondary transportability and
-> software-reproducibility analysis
+> Transportability and software reproducibility of a machine-learning triage model
+> for acute soft-tissue knee injury using patient-completed questionnaires:
+> a secondary analysis of a prospective cohort at a UK urgent treatment center
 
 CamKIT-AI is a 12-feature machine-learning triage model for acute soft-tissue
 knee injury, developed with AutoPrognosis 2.0 from clinician-documented records
@@ -85,6 +85,12 @@ performance or study results.
 
 Additional aggregate material may be requested from the corresponding author
 subject to institutional review.
+
+## Citation
+
+Citation metadata for this analysis package are provided in
+[`CITATION.cff`](CITATION.cff). Once a release is archived on Zenodo, cite the DOI
+for the specific version used.
 
 ## License
 

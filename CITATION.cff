@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these analysis materials, please cite this software release."
+type: software
+title: "CamKIT-AI: analysis code, fitted-pipeline specification and aggregate study results"
+version: 0.1.0
+authors:
+  - family-names: Castagno
+    given-names: Simone
+    affiliation: "Department of Surgery, University of Cambridge"
+repository-code: "https://github.com/simocasta/camkit-ai-analysis"
+url: "https://github.com/simocasta/camkit-ai-analysis"
+license: Apache-2.0
+abstract: >-
+  Analysis code, fitted-pipeline specification, archived software-environment
+  provenance, synthetic input examples and non-disclosive aggregate results
+  supporting a secondary transportability and software-reproducibility analysis
+  of a machine-learning triage model for acute soft-tissue knee injury using
+  patient-completed questionnaires. Participant-level inputs, record-level
+  predictions and the fitted model are not included. These public materials
+  support inspection and testing of the analysis utilities but do not permit
+  independent regeneration of the reported predictions.
+keywords:
+  - acute knee injury
+  - machine learning
+  - triage
+  - transportability
+  - software reproducibility
